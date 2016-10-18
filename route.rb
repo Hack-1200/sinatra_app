@@ -1,5 +1,5 @@
-# $LOAD_PATH<<File.dirname(__FILE__)
-require 'server.rb'
+#$LOAD_PATH<<File.dirname(__FILE__)
+require './server'
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'json'
