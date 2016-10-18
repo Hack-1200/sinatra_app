@@ -1,4 +1,4 @@
-require "puma/plugin/heroku"
+# require "puma/plugin/heroku"
 Puma::Plugin.create do
   def config(c)
 
