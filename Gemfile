@@ -6,11 +6,12 @@ gem 'sinatra'
 # gem 'sqlite3'
 gem 'rake'
 gem 'puma'
+gem 'pg'
 
-group :development do
-	gem 'sqlite3'
-end
+# group :development do
+# 	gem 'sqlite3'
+# end
 
-group :production do 
-	gem 'pg'
-end
+# group :production do 
+# 	gem 'pg'
+# end
