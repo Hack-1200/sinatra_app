@@ -4,19 +4,15 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'json'
 # set :database, "sqlite3:ege_db.sqlite3"
-serv=Server.new
+
 get '/' do 
 	return_message={}
-	# sr=serv.get_text
-	if sr=serv.get_text
-		return_message={
-			status:'Succes',
-			time:Time.now,
-			data:sr
-		}
+	serv=Server.all
+	if !serv.empty?
+		return_message[:status]="Success"
+		return_message=serv
 	else
-		return_message[:status]='error'
-		# return_message[:body]=0
+		return_message[:status]="Error"
 	end
 	return_message.to_json
 end
