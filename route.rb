@@ -1,8 +1,9 @@
 #$LOAD_PATH<<File.dirname(__FILE__)
-require './server'
+
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'json'
+require './server'
 # set :database, "sqlite3:ege_db.sqlite3"
 
 get '/' do 
